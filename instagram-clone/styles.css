@@ -1,0 +1,243 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;/*when you use box-sizing: border-box, 
+    the specified width and height include the padding and border 
+    of the element, rather than being added to it. This means that 
+    the padding and border are included in the box's total width and height,
+    and the content area shrinks accordingly to accommodate them.*/
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 18%;
+    border-bottom: 1px solid rgba(210,219,219,1);
+    background-color: white;
+    position:sticky;
+    top:0;
+    z-index: 10;
+    /*This property sets the stacking order of the element within its containing block. 
+    An element with a higher z-index value will appear in front of elements with lower z-index values. 
+    In this case, the element with z-index: 10; will be stacked above other elements with lower z-index 
+    values within the same stacking context.*/
+}
+header .search-bar{
+    width:250px;
+    background-color: rgba(241,234,234);
+    padding:3px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+}
+header .search-bar input{
+    height:30px;
+    border:none;
+    outline: none;
+    background-color: rgb(241, 234, 234);
+    padding-left :-14px;
+    font-size:15px;
+
+
+}
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+header nav ul li{
+    margin-right:20px;
+}
+header nav ul li i{
+    font-size:26px;
+}
+section{
+    padding:30px 18%;
+    background-color: #fafafa;
+    display:flex
+}
+.left-side{
+    width:65%;
+}
+.right-side{
+    width:35%;
+}
+.story{
+    display:flex;
+    padding:16px;
+    background-color: white;
+    border:1px solid rgba(210,219,219,1);
+    border-radius: 3px;
+}
+.story .stories{
+    width:17%;
+}
+.story .stories a img{
+    border-radius: 50%;
+    border:2px solid rgba(210,219,219,1);
+    padding :1px;
+    object-fit: cover;/*When you apply object-fit: cover; to an image or video, 
+    it means that the content will be resized to cover the entire container while maintaining its aspect ratio. */
+}
+.story .stories p{
+    width:90%;
+    overflow: hidden;
+    white-space: nowrap;/*The CSS property white-space: nowrap; 
+    is used to prevent text from wrapping to the next line within 
+    its containing element. */
+    text-overflow: ellipsis;
+    color:black;
+}
+/*post*/
+.post{
+    margin:25px 0;
+    background-color: white;
+    border:1px solid rgba(219, 219, 219, 1);
+    border-radius: 3px;
+}
+.post .post-bar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+.post .post-title .post-left{
+    display: flex;
+    align-items: center;
+}
+.post .post-bar .post-left .image{
+    margin-right:15px;
+}
+.post .post-bar .post-left .image, .post .post-bar .post-left .details {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right:10px;
+}
+.post .post-bar .post-left .image img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.post .post-bar .post-left .details .name{
+    padding-bottom: 2px;
+    font-weight: bold;
+}
+.post .post-content img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post .post-footer{
+    display: flex;
+    justify-content: space-between;
+    padding :16px;
+}
+.post .post-footer .like-share-comments i{
+    font-size: 26px;
+    margin-right: 10px;
+    
+}
+.post .post-footer .save{
+    font-size: 22px;
+}
+.post .post-footer-content{
+    padding :0 16px 16px 16px; 
+}
+.post .post-footer-content p{
+    margin-bottom:3px;
+
+} 
+.post .post-footer-content .likes{
+    margin-bottom: 8px;
+}
+.post .post-footer-content .name{
+    font-weight: 600;
+}
+.post .post-footer-content .name span{
+    margin-left:10px;
+    font-weight:normal;
+}
+.post .add-comments{
+    padding: 16px;
+    border-top:1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.post .add-comments .left-side{
+    display: flex;
+    align-items: center;
+}
+.post .add-comments .left-side i{
+    font-size: 22px;
+    margin-right: 15px;;
+}
+.post .add-comments .left-side input{
+    width:100%;
+    outline: none;
+    border:none;
+
+}
+.post .post-content .video-container {
+    width: 100%;
+    max-width: 600px; /* Adjust according to your layout */
+    margin: 0 auto;
+    overflow: hidden; /* Ensures video is contained within the container */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.right-side{
+    width: 35%;
+    margin-top:5%;
+    position: fixed;
+    right: 50px;
+}
+.right-side .profile-title{
+    display:flex;
+    align-items: center;
+}
+.right-side .profile-title .profile-left{
+    display:flex;
+    align-items: centre;
+    margin-right: 40px;
+}
+.right-side .profile-title .profile-left .image img{
+    border: radius 50%;
+    margin-right:15px;
+
+}
+.right-side .profile-title .details .name{
+    padding-bottom:3px;
+}
+.suggestions{
+    display:flex;
+    margin-top:25px;
+    margin-bottom:20px;
+}
+.suggestions p{
+    margin-right:90px;
+}
+.suggestion-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.suggestion-title .suggestion-left{
+    display: flex;
+    align-items: center;
+    margin-right:90px;
+}
+.suggestion-title .suggestion-left .image img{
+    border: radius 50%;
+    margin-right:15px;
+    object-fit: cover;
+
+}
+.suggestion-title .suggestion-left .details .name{
+    padding-bottom: 3px;
+}
